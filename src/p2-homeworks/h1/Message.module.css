@@ -1,3 +1,53 @@
-.message {
+.msgWrapper {
+    display: flex;
+    flex-direction: row;
+}
 
+.msgWrapper.active {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.message {
+    min-width: 300px;
+    min-height: 60px;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.body {
+    background: #0066CC;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 15px;
+    text-align: right;
+    padding: 5px;
+}
+.body.active {
+    background: #F5F7FB;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 15px;
+    text-align: left;
+    padding: 5px;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.time {
+    font-size: 10px;
+    font-family: Montserrat;
 }

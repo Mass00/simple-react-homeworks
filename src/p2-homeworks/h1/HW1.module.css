@@ -1,0 +1,26 @@
+.container {
+    padding: 0px 70px 32px 70px;
+}
+.container h1 {
+    font-size: 22px;
+    font-family: Montserrat;
+    margin: 107px 0px 10px 0px;
+
+}
+.container input {
+    background: #F5F7FB;
+    border: 2px solid transparent;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    padding: 5px;
+}
+.container button {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    background: #0066CC;
+    border-radius: 20px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
