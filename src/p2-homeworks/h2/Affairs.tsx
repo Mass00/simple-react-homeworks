@@ -1,10 +1,11 @@
 import React from 'react'
 import Affair from './Affair'
-import {AffairType} from './HW2'
-
+import {AffairType, FilterType} from './HW2'
+import st from './Affairs.module.css'
 type AffairsPropsType = { // need to fix any
-    data: any
-    setFilter: any
+    data: AffairType[]
+    filter: FilterType
+    setFilter:  React.Dispatch<React.SetStateAction<FilterType>>
     deleteAffairCallback: any
 }
 
@@ -17,20 +18,48 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {} // need to fix
-    const setHigh = () => {}
-    const setMiddle = () => {}
-    const setLow = () => {}
+    const setAll = () => {props.setFilter("all")} // need to fix
+    const setHigh = () => {props.setFilter("high")}
+    const setMiddle = () => {props.setFilter("middle")}
+    const setLow = () => {props.setFilter("low")}
 
     return (
-        <div>
-
+        <div className={st.container}>
+            <div className={st.buttonsGrp}>
+                <button
+                    style={{
+                        border: '2px solid blue',
+                        marginRight: '5px',
+                        background: props.filter === 'all' ? "blue" : "white",
+                        color: props.filter === 'all' ? "white" : "blue"
+                }}
+                    onClick={setAll}>All</button>
+                <button
+                    style={{
+                        border: '2px solid red',
+                        marginRight: '5px',
+                        background: props.filter === 'high' ? "red" : "white",
+                        color: props.filter === 'high' ? "white" : "red",
+                    }}
+                    onClick={setHigh}>High</button>
+                <button
+                    style={{
+                        border: '2px solid green',
+                        marginRight: '5px',
+                        background: props.filter === 'middle' ? "green" : "white",
+                        color: props.filter === 'middle' ? "white" : "green",
+                    }}
+                    onClick={setMiddle}>Middle</button>
+                <button
+                    style={{
+                        border: '2px solid orange',
+                        marginRight: '5px',
+                        background: props.filter === 'low' ? "orange" : "white",
+                        color: props.filter === 'low' ? "white" : "orange",
+                    }}
+                    onClick={setLow}>Low</button>
+            </div>
             {mappedAffairs}
-
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
         </div>
     )
 }

@@ -1,8 +1,13 @@
 import React from 'react'
 import st from './HW1.module.css'
 import Message from "./Message";
-
-const messageData = [
+type MessageDataType = {
+    avatar: string
+    name: string
+    message: string
+    time: string
+}
+const messageData:MessageDataType[] = [
     {
         avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
         name: 'Ivan',

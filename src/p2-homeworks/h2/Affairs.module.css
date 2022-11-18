@@ -1,3 +1,17 @@
-.someClass {
+.container {
 
+}
+.buttonsGrp{
+    margin: 5px;
+}
+.buttonsGrp button{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 15px;
+    min-width: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
 }
