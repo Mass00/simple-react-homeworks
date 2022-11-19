@@ -24,7 +24,7 @@ function Affairs(props: AffairsPropsType) {
     const setLow = () => {props.setFilter("low")}
 
     return (
-        <div className={st.container}>
+        <div>
             <div className={st.buttonsGrp}>
                 <button
                     style={{
@@ -59,7 +59,10 @@ function Affairs(props: AffairsPropsType) {
                     }}
                     onClick={setLow}>Low</button>
             </div>
-            {mappedAffairs}
+            <div className={st.container}>
+                {mappedAffairs}
+            </div>
+
         </div>
     )
 }

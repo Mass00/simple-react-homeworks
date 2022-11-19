@@ -1,5 +1,9 @@
 .container {
-
+    height: 180px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .buttonsGrp{
     margin: 5px;
